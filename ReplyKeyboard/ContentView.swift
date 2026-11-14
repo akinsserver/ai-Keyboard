@@ -1,6 +1,5 @@
 import Photos
 import SwiftUI
-import ReplyKit
 
 /// Setup checklist for the container app.
 ///

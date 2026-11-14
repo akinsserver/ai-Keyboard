@@ -80,13 +80,14 @@ This project was written on a Linux machine with no Xcode, so it has
   braces are off. The safest repair is to create a fresh project in
   Xcode (App + Custom Keyboard Extension targets, same bundle IDs
   and file names) and drag the existing `ReplyKeyboard/`,
-  `Keyboard/` and `Packages/ReplyKit/` folders into it, instead of
+  `Keyboard/` and `Shared/` folders into it, instead of
   debugging the pbxproj by hand.
-- **"No such module 'ReplyKit'"**: select the ReplyKeyboard project >
-  each target > General > Frameworks, Libraries, and Embedded Content,
-  and check the local package `Packages/ReplyKit` is listed with the
-  ReplyKit product. If not, use File > Add Package Dependencies >
-  Add Local and pick the `Packages/ReplyKit` folder.
+- **"No such module ..." for a Shared file**: the `Shared/` files are
+  compiled directly into both targets — there is no Swift package
+  anymore (it caused "Missing package product" errors and was
+  removed in the Nov 13 rebuild). Check the file is listed in the
+  target's Build Phases > Compile Sources. If a Shared file is
+  missing there, drag it from the `Shared/` folder into the target.
 - **"Multiple commands produce … Keyboard.appex"** or an embed error:
   check the app target's Build Phases has exactly one
   "Embed App Extensions" phase containing Keyboard.appex.

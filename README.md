@@ -100,14 +100,15 @@ Keyboard/                 Custom keyboard extension (UIKit + SwiftUI)
   KeyboardView.swift      QWERTY layout, tone chips, Screenshot, suggestions
   Info.plist              NSExtension keyboard-service, RequestsOpenAccess YES
   Keyboard.entitlements   App Group
-Packages/ReplyKit/        Local Swift package shared by app + keyboard
-  Sources/ReplyKit/
-    Tone.swift            Tone enum + presets
-    SettingsStore.swift   App Group UserDefaults (tone, approach, lengths, provider, key)
-    ScreenshotService.swift  Latest screenshot (PHAsset) + Vision OCR
-    SuggestionEngine.swift   Prompt builder + suggestion parser
-    GeminiClient.swift    Gemini generateContent REST client
-    FoundationModelsClient.swift  iOS 26-gated on-device client
+Shared/                   Shared Swift files, compiled into BOTH targets
+                          (no Swift package — the package caused
+                          "Missing package product" build errors)
+  Tone.swift              Tone enum + presets
+  SettingsStore.swift     App Group UserDefaults (tone, approach, lengths, provider, key)
+  ScreenshotService.swift Latest screenshot (PHAsset) + Vision OCR
+  SuggestionEngine.swift  Prompt builder + suggestion parser
+  GeminiClient.swift      Gemini generateContent REST client
+  FoundationModelsClient.swift  iOS 26-gated on-device client
 ```
 
 ## Known limits
