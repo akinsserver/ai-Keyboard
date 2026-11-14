@@ -1,6 +1,5 @@
 import UIKit
 import SwiftUI
-import ReplyKit
 
 /// The custom keyboard extension.
 ///

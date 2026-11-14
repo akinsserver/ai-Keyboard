@@ -1,6 +1,5 @@
 import Photos
 import SwiftUI
-import ReplyKit
 
 /// Tests the full flow inside the container app, without the keyboard:
 /// import the latest screenshot, run on-device OCR, generate 3 suggestions.

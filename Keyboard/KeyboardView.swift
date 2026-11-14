@@ -1,6 +1,5 @@
 import Photos
 import SwiftUI
-import ReplyKit
 
 /// View model for the keyboard. Owns typing, the screenshot flow and
 /// suggestion state. OCR and network run on background tasks; only the

@@ -1,5 +1,4 @@
 import SwiftUI
-import ReplyKit
 
 /// Settings: tone, custom approach, reply length, AI provider, Gemini key.
 struct SettingsView: View {
